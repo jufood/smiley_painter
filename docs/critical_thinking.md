@@ -1,0 +1,3 @@
+# Critical Thinking
+
+I centered the smile using the canvas size and face radius instead of fixed screen coordinates. The face center is based on `size.width / 2` and `size.height / 2`, and the radius is calculated using `size.shortestSide * 0.4`, so the drawing stays proportional when the screen size changes. For the mouth, I used `drawArc()` with a rectangle sized relative to the face radius, and I tested the app on the phone emulator in portrait mode while changing the mood slider. The `shouldRepaint()` method returns true when the mood, face type, or face color changes so Flutter redraws the face only when one of the painter inputs changes.
